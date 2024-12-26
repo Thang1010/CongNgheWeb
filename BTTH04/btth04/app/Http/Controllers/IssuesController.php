@@ -59,7 +59,7 @@ class IssuesController extends Controller
     ]);
 
     // Chuyển hướng người dùng về trang danh sách các issues với thông báo thành công
-    return redirect()->route('issues.index')->with('success', 'Issue created successfully!');
+    return redirect()->route('issues.index')->with('success', 'Đồ án đã thêm thành công');
 }
 
     /**
@@ -111,12 +111,6 @@ class IssuesController extends Controller
         return redirect()->route('issues.index')->with('success', 'Vấn đề được cập nhật thành công');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         $issues = Issues::findOrFail($id);
